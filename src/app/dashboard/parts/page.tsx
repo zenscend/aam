@@ -14,7 +14,7 @@ import {
   ExternalLink,
   ArrowUpRight,
 } from 'lucide-react';
-import { projects, getStatusColor, PartStatus } from '@/lib/mock-data';
+import { projects, PartStatus } from '@/lib/mock-data';
 import { clsx } from 'clsx';
 
 // Flatten all parts from all projects

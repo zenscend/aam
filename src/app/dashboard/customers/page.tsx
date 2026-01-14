@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Link from 'next/link';
-import { Search, User, Mail, Phone, MapPin, FolderKanban, ArrowRight, Plus } from 'lucide-react';
+import { Search, User, Mail, Phone, MapPin, FolderKanban, Plus } from 'lucide-react';
 import { customers, projects } from '@/lib/mock-data';
 
 export default function CustomersPage() {

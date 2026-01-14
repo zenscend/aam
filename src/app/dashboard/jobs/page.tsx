@@ -46,19 +46,6 @@ export default function JobsPage() {
     return matchesSearch && matchesDepartment && matchesStatus;
   });
 
-  const getTaskStatusIcon = (status: string) => {
-    switch (status) {
-      case 'complete':
-        return <CheckCircle2 className="w-5 h-5 text-green-500" />;
-      case 'in_progress':
-        return <Clock className="w-5 h-5 text-amber-500" />;
-      case 'blocked':
-        return <AlertCircle className="w-5 h-5 text-red-500" />;
-      default:
-        return <div className="w-5 h-5 rounded-full border-2 border-gray-300" />;
-    }
-  };
-
   const tasksByStatus = {
     pending: filteredTasks.filter((t) => t.status === 'pending'),
     in_progress: filteredTasks.filter((t) => t.status === 'in_progress'),
