@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Link from 'next/link';
-import { Search, Filter, Grid, List, Calendar, DollarSign, ArrowRight } from 'lucide-react';
+import { Search, Filter, Grid, List, Calendar, ArrowRight } from 'lucide-react';
 import { projects, getStatusColor, getStatusLabel, getProjectTypeLabel } from '@/lib/mock-data';
 import { clsx } from 'clsx';
 
@@ -152,7 +152,6 @@ export default function ProjectsPage() {
                     <span>{project.targetDate || 'TBD'}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <DollarSign className="w-3.5 h-3.5" />
                     <span>R{project.budget.toLocaleString()}</span>
                   </div>
                 </div>

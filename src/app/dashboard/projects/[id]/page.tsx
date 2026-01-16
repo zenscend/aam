@@ -1,6 +1,5 @@
 'use client';
 
-import { use } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import {
@@ -27,8 +26,8 @@ import {
 } from '@/lib/mock-data';
 import { clsx } from 'clsx';
 
-export default function ProjectDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function ProjectDetailPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const project = projects.find((p) => p.id === id) || projects[0];
 
   const getTaskStatusIcon = (status: string) => {
